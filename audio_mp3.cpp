@@ -111,7 +111,7 @@ DECODE_STATUS decode_mp3(HMP3Decoder mp3_decoder, FILE *fp, decode_data *pData, 
 
             pData->frame_count = (frame_info.outputSamps / frame_info.nChans);
 
-            LOGI_3("mp3: channels %d, sr %d, bps %d, frame_count %d, processed %d",
+            LOGI_3("mp3: channels %lu, sr %d, bps %lu, frame_count %d, processed %u",
                 pData->fmt.channels,
                 pData->fmt.sample_rate,
                 pData->fmt.bits_per_sample,

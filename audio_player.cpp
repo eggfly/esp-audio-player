@@ -381,9 +381,9 @@ static esp_err_t aplay_file(audio_instance_t *i, FILE *fp)
              */
             size_t i2s_bytes_written = 0;
             size_t bytes_to_write = i->output.frame_count * i->output.fmt.channels * (instance.i2s_format.bits_per_sample / 8);
-            LOGI_2("c %d, bps %d, bytes %d, frame_count %d",
+            LOGI_2("channel %lu, bps %lu, bytes %u, frame_count %u",
                 i->output.fmt.channels,
-                i2s_format.bits_per_sample,
+                instance.i2s_format.bits_per_sample,
                 bytes_to_write,
                 i->output.frame_count);
 
